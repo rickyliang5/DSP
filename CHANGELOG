@@ -1,0 +1,256 @@
+*******************************************************************************
+* RECENT CHANGES
+*******************************************************************************
+
+=== 1.0.32 ===
+* Fixed compilation warnings for Clang.
+
+=== 1.0.31 ===
+* Implementation of 3D mathematics using AVX instruction set.
+* Fixed improper AVX-512 optimization for lanczos kernel genration function.
+* Fixed Mid/Side transformation functions bug for 32-bit and 64-bit ARM processors. 
+* Added MacOS CI builds.
+* Updated module versions in dependencies.
+
+=== 1.0.30 ===
+* Implemented SIMD-optimized trigonometric functions sinf and cosf.
+* Implemented Lanczos filter kernel computation function.
+* Updated build scripts.
+* Updated module versions in dependencies.
+
+=== 1.0.29 ===
+* Implemented AVX-512 optimized direct_fft and reverse_fft functions.
+* Added definition of MacOS dependencies in build scripts.
+* Updated module versions in dependencies.
+
+=== 1.0.28 ===
+* The DSP library now builds for Apple M1 chips and above on MacOS.
+* Implemented abs_max2, abs_min2, abs_max3 and abs_min3 functions.
+* Implemented sign_min, sign_max, sign_minmax functions.
+* Updated build scripts.
+* Updated module versions in dependencies.
+
+=== 1.0.27 ===
+* Updated build scripts.
+* Updated module versions in dependencies.
+
+=== 1.0.26 ===
+* Updated build scripts.
+* Updated module versions in dependencies.
+
+=== 1.0.25 ===
+* Implemented AVX-512 optimized minimum and maximum search functions.
+* Implemented AVX-512 optimized direct convolution function.
+* Updated build scripts.
+* Updated module versions in dependencies.
+
+=== 1.0.24 ===
+* Fixed build for x86 Clang.
+
+=== 1.0.23 ===
+* Updated module versions in dependencies.
+
+=== 1.0.22 ===
+* Implemented functions for computing correlation between two signals.
+* Fixed error in AVX and AVX-512 implementation of lr_to_ms functions.
+* Updated build scripts.
+* Updated module versions in dependencies.
+
+=== 1.0.21 ===
+* Updated build scripts.
+* Updated module versions in dependencies.
+
+=== 1.0.20 ===
+* Optimization of compressor and gate functions using AVX-512 instruction set.
+* Introduced SIMD-optimized expander curve and gain functions.
+* Improved performance of logarithm values calculations.
+* Fixed Mid/Side conversion functions for AArch64 architecture (contributed by
+  marcan at GitHub).
+* Updated build scripts.
+* Updated module versions in dependencies.
+
+=== 1.0.19 ===
+* AVX2 optimization of search functions for maximum and minimum.
+* Implemented SIMD-optimized gate functions.
+* Fixed bun in AVX-512 implementation of mid/side conversion functions.
+* AVX512 optimization of packed complex functions.
+* Additional optimizations of parallel mathematics functions with AVX-512 instruction set.
+
+=== 1.0.18 ===
+* Fixed compilation regression for 32-bit Clang compiler.
+
+=== 1.0.17 ===
+* Implemented SIMD-optimized 2-knee compressor curve and gain calculation functions.
+* Implemented several AVX-512 optimized packed complex functions.
+* Removed pcomplex_add_r function. Use pcomplex_r2c_add2 function instead.
+* Fixed improper formula for complex_div and pcomplex_div functions.
+* Implemented sqr1, sqr2, ssqr1 and ssqr2 functions.
+* Implemented axis_apply_lin1 function.
+* Updated module versions in dependencies.
+
+=== 1.0.16 ===
+* Fixed improper AVX-512 detection which causes crash for several functions.
+
+=== 1.0.15 ===
+* Several functions optimized for AVX-512 support.
+* Fixed several issues reported by PVS Studio static analyzer.
+* Fixed syntax error in C interface, covered with tests.
+* Bugfix in horizontal summing functions (invalid register clobber list).
+* Some AMD-related optimizations.
+* Updated module versions in dependencies.
+
+=== 1.0.14 ===
+* Implemented pcomplex_r2c instruction set.
+* Updated build scripts.
+* Updated module versions in dependencies.
+
+=== 1.0.13 ===
+* Implemented AVX2-optimized hsla_to_rgba and rgba_to_hsla functions.
+* Implemented high-precision lanczos 2x, 3x, 4x, 6x and 8x oversampling functions.
+* Updated build scripts.
+* Updated module versions in dependencies.
+
+=== 1.0.12 ===
+* Added series of functions for processing 1-bit, 2-bit, 4-bit and 8-bit grayscale
+  bitmaps which can be useful for quick text rendering using glyph images.
+* Removed Makefile.d. Dependencies are now automatically generated at the build stage.
+* Updated build scripts.
+* Updated module versions in dependencies.
+
+=== 1.0.11 ===
+* Small math optimizations for dsp::smooth_cubic_linear and dsp::smooth_cubic_log
+  functions.
+* Updated module versions in dependencies.
+
+=== 1.0.10 ===
+* ARM NEON-optimized code compiles now only for at least ARMv6 architecture.
+* Implemented linear ramping lramp_* functions optimized for
+  i686, x86_64, ARM-32 and AArch64 architectures.
+* Fixed avx::dyn_biquad_process_x8_fma3 function implementation.
+* Slight optimizations of avx::biquad_process_x4_fma3 and avx::dyn_biquad_process_x4_fma3. 
+* Added test build for Windows using MSYS2.
+* Updated build scripts.
+* Updated module versions in dependencies.
+
+=== 1.0.9 ===
+* Added Clang build for the CI.
+
+=== 1.0.8 ===
+* Better optimizations of dsp::copy and dsp::move for SSE, SSE3 and AVX.
+* The function dsp::init() is now thread safe.
+* Additional optimization of dsp::normalize() function, added dsp::normalize1()
+  and dsp::normalize2() functions.
+* Updated build scripts.
+
+=== 1.0.7 ===
+* Implemented axis_apply_log1 and axis_apply_log2 optimized for AArch64 ASIMD.
+* Implemented fill_rgba and fill_hsla for AArch64 ASIMD.
+* Implemented rgba_to_hsla, hsla_to_rgba, rgba_to_bgra32, rgba32_to_bgra32 for AArch64 ASIMD.
+* Implemented eff_hsla_hue, eff_hsla_sat, eff_hsla_light, eff_hsla_alpha for AArch64 ASIMD.
+
+=== 1.0.6 ===
+* Updated build scripts.
+
+=== 1.0.5 ===
+* Implemented dsp::prgba32_set_alpha and dsp::pbgra32_set_alpha functions.
+* Better assembly code form 32-bit ARM, now compatible with Clang.
+* Better assembly code form 64-bit ARM, now compatible with Clang.
+* Updated build scripts.
+
+=== 1.0.4 ===
+* Updated build scripts.
+
+=== 1.0.3 ===
+* Migrating to C++ 11 support.
+* Updated library dependencies.
+* Updated build scripts.
+
+=== 1.0.2 ===
+* Updated build scripts.
+
+=== 1.0.1 ===
+* Updated build scripts.
+
+=== 1.0.0 ===
+* Updated build scripts.
+* Added Eclipse project files.
+
+=== 0.5.14 ===
+* Updated build system.
+
+=== 0.5.13 ===
+* Added x86/x86_64 4-lobe oversampling functions.
+* Added ARMv7 NEON-optimized 4-lobe oversampling functions.
+* Added AArch64 ASIMD-optimized 4-lobe oversampling functions.
+* Fixed target compiler architecture detection.
+
+=== 0.5.12 ===
+* Submitted x86/x86_64 SSE2-optimized linear interpolation functions.
+* Submitted x86/x86_64 AVX2-optimized linear interpolation functions.
+* Submitted ARMv7 NEON-optimized linear interpolation functions.
+* Submitted AArch64 ASIMD-optimized linear interpolation functions.
+* Updated build system.
+
+=== 0.5.11 ===
+* Improved build: fixed many GCC warnings.
+* DSP library can now be compiled with Clang C++ compiler.
+
+=== 0.5.10 ===
+* Updated build scripts.
+* Reviewed generic abgr32_to_bgrff function implementation for Big endian platforms.
+* Submitted x86/x86_64 SSE2-optimized function abgr32_to_bgrff.
+* Submitted x86/x86_64 AVX2-optimized function abgr32_to_bgrff.
+* Submitted ARMv7 NEON-optimized function abgr32_to_bgrff.
+* Submitted AArch64 ASIMD-optimized function abgr32_to_bgrff.
+* Fixed lacking export for SSE2-optimized functions support: fmmod3, fmrmod3, fmmod4, fmrmod4.
+* Added support of AMD Zen 2 architecture for CPU tuning.
+* More careful AVX2 support detection for AMD processors.
+* Fixed improper RGBA to HSLA conversion in rgba_to_hsla routine.
+
+=== 0.5.9 ===
+* Updated build scripts that now use tags without prefixes first.
+
+=== 0.5.8 ===
+* Fixed excessive header installation with proper one.
+* Fixed installation and deinstallation of shared object and library files.
+* Added `make distsrc` target to build tarball with all required source code.
+
+=== 0.5.7 ===
+* Updated makefiles: added `make tree` target.
+
+=== 0.5.6 ===
+* Added build of static library.
+* Source code now more properly references LGPL3+ license.
+
+=== 0.5.5 ===
+* Provided C-compatible function interface and symbol exports. All C functions and
+  types are prefixed with lsp_dsp_ prefix to not to clash with other types. C++
+  interface has not changed, all functions and data types are still in lsp::dsp namespace.
+
+=== 0.5.4 ===
+* Added pkg-config file generation.
+
+=== 0.5.3 ===
+* Added pmin, pmax, psmin, psmax, pamin, pamax functions.
+* Added SSE optimizations for pmin, pmax, psmin, psmax, pamin, pamax functions.
+* Added AVX optimizations for pmin, pmax, psmin, psmax, pamin, pamax functions.
+* Added ARMv7 optimizations for pmin, pmax, psmin, psmax, pamin, pamax functions.
+* Added AArch64 optimizations for pmin, pmax, psmin, psmax, pamin, pamax functions.
+* Fixed bugs in msmatrix conversion functions for AVX and SSE.
+* Fixed bugs in sse::bilinear_transform_x1 routine.
+
+=== 0.5.2 ===
+* Updated build system.
+* Code refactoring.
+* Added openBSD support in build.
+
+=== 0.5.1 ===
+* Some minor code refactoring.
+
+=== 0.5.0 ===
+* Initial release.
+* Supports SIMD optimizations for 32-bit i586 architecture.
+* Supports SIMD optimizations for 64-bit x86_64 architecture.
+* Supports SIMD optimizations for 32-bit ARMv7 architecture.
+* Supports SIMD optimizations for 64-bit AArch64 architecture.
+

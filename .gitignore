@@ -1,0 +1,13 @@
+/.svn/*
+/.settings/*
+/.build/*
+/.test/*
+/Release
+*.log
+/gmon.out
+**/*.gmon
+*.core
+/.config.mk
+/modules/
+/DebugLinux/
+/DebugWin/
