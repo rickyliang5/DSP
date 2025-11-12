@@ -56,7 +56,7 @@ architecture-specific optimizations.
 
 ## Requirements
 
-The following packages need to be installed for building:
+The following packages need to be installed for building:/
 
 * gcc >= 4.9
 * make >= 4.0
