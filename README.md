@@ -78,7 +78,7 @@ To get more build options, run:
 make help
 ```
 
-To uninstall library, simply issue:
+To uninstall library, simply issue:/
 
 ```bash
 make uninstall
