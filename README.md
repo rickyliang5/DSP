@@ -49,7 +49,7 @@ The support of following list of hardware architectures has been implemented:
 * x86_64 (64-bit) - full support (SSE1-SSE3, AVX, AVX2, partial support for AVX-512).
 * ARMv6A - full support.
 * ARMv7A - full support.
-* AArch64 - full support.
+* AArch64 - full support..
 
 For all other architectures the generic implementation of algorithms is used, without any
 architecture-specific optimizations. 
