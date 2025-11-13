@@ -32,7 +32,7 @@ Current set of functions provided:
   * Interpolation functions;
   * Some set of function to work with 3D mathematics.
 
-## Supported platforms##
+## Supported platforms#####
 
 The build and correct unit test execution has been confirmed for following platforms:
 * FreeBSD
