@@ -65,7 +65,7 @@ The following packages need to be installed for building:/
 
 To build the library, perform the following commands:
 
-```bash
+```bash''
 make config # Configure the build
 make fetch # Fetch dependencies from Git repository
 make
